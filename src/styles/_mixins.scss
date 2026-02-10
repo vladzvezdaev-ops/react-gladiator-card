@@ -1,0 +1,16 @@
+$breakpoints: (
+  "mobile": 480px,
+  "tablet": 768px,
+  "laptop": 1024px,
+  "desktop": 1200px
+);
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Указанное значение не найдено в списке брейкпоинтов: #{$breakpoint}.";
+  }
+}

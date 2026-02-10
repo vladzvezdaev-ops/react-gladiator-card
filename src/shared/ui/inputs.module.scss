@@ -1,0 +1,51 @@
+@import "@/styles/_variables.scss";
+
+.baseInput {
+  width: 100%;
+  background-color: rgba(245, 230, 200, 0.2);
+  border: 1px solid $primary-border-color;
+  border-radius: 4px;
+  padding: 6px 12px;
+  color: #3e2723;
+  font-family: "Georgia", serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.3s ease;
+
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+  &::placeholder {
+    color: rgba(33, 21, 19, 0.6);
+    font-style: italic;
+  }
+
+  input:not(:placeholder-shown) {
+    color: $primary-form-color;
+    background-color: rgba(245, 230, 200, 0.2);
+    border-color: $primary-border-color;
+  }
+
+  &:focus {
+    background-color: rgba(245, 230, 200, 0.4);
+    border-color: #8d6e63;
+    box-shadow:
+      inset 1px 1px 3px rgba(0, 0, 0, 0.2),
+      0 0 8px rgba(184, 155, 94, 0.3);
+  }
+}
+
+.baseSelect {
+  @extend .baseInput;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23b89b5e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+
+.baseTextarea {
+  @extend .baseInput;
+  resize: none;
+  min-height: 80px;
+}

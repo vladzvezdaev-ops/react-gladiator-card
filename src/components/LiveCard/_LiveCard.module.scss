@@ -1,0 +1,139 @@
+@import "@/styles/_mixins.scss";
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(max-content, 220px));
+  padding: 10px;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.Mainfieldset,
+.Secondfieldset,
+.Thirdfieldset,
+.submitBtn,
+.resetBtn {
+  width: 180px;
+  box-sizing: border-box;
+
+  @include respond-to("tablet") {
+    width: 160px;
+  }
+}
+
+.formMainInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 150px;
+}
+
+.Mainfieldset {
+  display: flex;
+  flex-direction: column;
+  color: $primary-border-color;
+  border: 1px solid $primary-border-color;
+  border-radius: 15px;
+  padding: 8px;
+  gap: 4px;
+}
+
+.Secondfieldset {
+  display: flex;
+  flex-direction: column;
+  color: $primary-border-color;
+  border: 1px solid $primary-border-color;
+  border-radius: 15px;
+  padding: 8px;
+  gap: 8px;
+
+  @include respond-to("tablet") {
+    padding: 6px;
+    gap: 2px;
+  }
+}
+
+.Thirdfieldset {
+  display: flex;
+  flex-direction: column;
+  color: $primary-border-color;
+  border: 1px solid $primary-border-color;
+  border-radius: 15px;
+  margin-right: 12px;
+  margin-top: -1px;
+  padding: 8px;
+  gap: 16px;
+}
+
+.avatarLabel {
+  color: $primary-border-color;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-height: 65px;
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.imagePreview {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.submitBtn {
+  padding: 8px 8px;
+  border-radius: 25px;
+}
+
+.resetBtn {
+  padding: 8px 8px;
+  border-radius: 25px;
+}
+
+.bioSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 10px;
+
+  @include respond-to("tablet") {
+    padding: 6px;
+    gap: 2px;
+  }
+}
+
+.radioGroup {
+  display: flex;
+  gap: 10px;
+
+  @include respond-to("tablet") {
+    gap: 2px;
+  }
+}
+
+.spanHidden {
+  display: none;
+}
+
+.spanIcon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $primary-border-color;
+}
+
+.spanContent {
+  cursor: pointer;
+}
+
+.spanCounter {
+  text-align: center;
+}
